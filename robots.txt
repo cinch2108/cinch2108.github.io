@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: cinch2108.github.io/sitemap.xml
+Sitemap: https://cinch2108.github.io/sitemap.xml
 Sitemap: https://cinch2108.github.io/numora/sitemap.xml
 Sitemap: https://cinch2108.github.io/pixelsmith/sitemap.xml
 Sitemap: https://cinch2108.github.io/mintkit/sitemap.xml
