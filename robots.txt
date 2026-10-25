@@ -13,3 +13,4 @@ Sitemap: https://cinch2108.github.io/hourlark/sitemap.xml
 Sitemap: https://cinch2108.github.io/tagloom/sitemap.xml
 Sitemap: https://cinch2108.github.io/postsmith/sitemap.xml
 Sitemap: https://cinch2108.github.io/datakit/sitemap.xml
+Sitemap: https://cinch2108.github.io/studywren/sitemap.xml
