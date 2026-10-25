@@ -1,8 +1,8 @@
 // Postsmith service worker: caches the app shell for offline use. Every path is relative to
 // this file, so it works at the domain root or under any sub-path.
-const V = 'ps-mvo0yemt';
+const V = 'ps-mvo1hsbq';
 const BASE = new URL('./', self.location).href;
-const CORE = ["./","fancy-text-generator/","character-counter/","hashtag-generator/","emoji-picker/","social-media-image-sizes/","link-in-bio-builder/","privacy/","terms/","manifest.webmanifest","favicon.svg","img/logo.svg","fonts/inter.woff2","data/emoji.json","css/styles.css?v=mvo0yemt","js/theme.js?v=mvo0yemt","js/consent.js?v=mvo0yemt","js/app.js?v=mvo0yemt","js/bio-icons.js","js/bio-render.js","js/catalog.js","js/count.js","js/fancy.js","js/hashtag-data.js","js/limits.js","js/sizes-data.js","js/store.js","js/tool-bio.js","js/tool-counter.js","js/tool-emoji.js","js/tool-fancy.js","js/tool-hashtags.js","js/tool-sizes.js","js/ui.js","vendor/fflate.js"].map((p) => new URL(p, BASE).href);
+const CORE = ["./","fancy-text-generator/","character-counter/","hashtag-generator/","emoji-picker/","social-media-image-sizes/","link-in-bio-builder/","privacy/","terms/","manifest.webmanifest","favicon.svg","img/logo.svg","fonts/inter.woff2","data/emoji.json","css/styles.css?v=mvo1hsbq","js/theme.js?v=mvo1hsbq","js/consent.js?v=mvo1hsbq","js/app.js?v=mvo1hsbq","js/bio-icons.js","js/bio-render.js","js/catalog.js","js/count.js","js/fancy.js","js/hashtag-data.js","js/limits.js","js/sizes-data.js","js/store.js","js/tool-bio.js","js/tool-counter.js","js/tool-emoji.js","js/tool-fancy.js","js/tool-hashtags.js","js/tool-sizes.js","js/ui.js","vendor/fflate.js"].map((p) => new URL(p, BASE).href);
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(CORE)).catch(() => {})); self.skipWaiting(); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith('ps-') && k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', (e) => {
