@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /postsmith/
+Disallow: /postsmith/404.html
+
+Sitemap: https://cinch2108.github.io/postsmith/sitemap.xml

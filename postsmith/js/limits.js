@@ -1,0 +1,30 @@
+// Per-platform text limits, checked October 2026. `fold` = roughly how much shows before "…more".
+export const METHOD_NOTE = {
+  graphemes: 'Counts characters as you see them (an emoji = 1).',
+  x: 'X weighting: most CJK characters and every emoji count as 2, any link counts as 23.',
+  bsky: 'Bluesky counts visible characters; links are shortened (domain + start of the path) before counting.',
+  masto: 'Mastodon counts code points; links count as 23 and @user@server mentions count as @user.',
+};
+export const PLATFORMS = [
+  { id: 'x', group: 'X', name: 'X post', limit: 280, method: 'x', fold: null, note: 'Standard accounts.' },
+  { id: 'x-premium', group: 'X', name: 'X Premium post', limit: 25000, method: 'x', fold: 280, note: 'Long posts collapse after about 280 with “Show more”.' },
+  { id: 'x-bio', group: 'X', name: 'X bio', limit: 160, method: 'graphemes', fold: null },
+  { id: 'threads', group: 'Threads', name: 'Threads post', limit: 500, method: 'graphemes', fold: null, note: 'Up to 10,000 more characters can go in an optional text attachment.' },
+  { id: 'threads-bio', group: 'Threads', name: 'Threads bio', limit: 150, method: 'graphemes', fold: null },
+  { id: 'ig-caption', group: 'Instagram', name: 'Instagram caption', limit: 2200, method: 'graphemes', fold: 125, maxTags: 5, note: 'Max 5 hashtags per post.' },
+  { id: 'ig-bio', group: 'Instagram', name: 'Instagram bio', limit: 150, method: 'graphemes', fold: null },
+  { id: 'tiktok-caption', group: 'TikTok', name: 'TikTok caption', limit: 4000, method: 'graphemes', fold: 55, maxTags: 5, note: 'The feed shows only the first line or so.' },
+  { id: 'tiktok-bio', group: 'TikTok', name: 'TikTok bio', limit: 80, method: 'graphemes', fold: null },
+  { id: 'li-post', group: 'LinkedIn', name: 'LinkedIn post', limit: 3000, method: 'graphemes', fold: 210, note: '“…see more” appears after about 210 characters on desktop (about 140 on mobile).' },
+  { id: 'li-headline', group: 'LinkedIn', name: 'LinkedIn headline', limit: 220, method: 'graphemes', fold: null },
+  { id: 'li-about', group: 'LinkedIn', name: 'LinkedIn About', limit: 2600, method: 'graphemes', fold: 300 },
+  { id: 'fb-post', group: 'Facebook', name: 'Facebook post', limit: 63206, method: 'graphemes', fold: 477, note: 'Shorter on mobile (about 240).' },
+  { id: 'yt-title', group: 'YouTube', name: 'YouTube title', limit: 100, method: 'graphemes', fold: 70, noAngle: true, note: 'Search and suggested videos show about 70 characters.' },
+  { id: 'yt-desc', group: 'YouTube', name: 'YouTube description', limit: 5000, method: 'graphemes', fold: 150, noAngle: true },
+  { id: 'pin-title', group: 'Pinterest', name: 'Pinterest Pin title', limit: 100, method: 'graphemes', fold: 40 },
+  { id: 'pin-desc', group: 'Pinterest', name: 'Pinterest description', limit: 500, method: 'graphemes', fold: 50 },
+  { id: 'bsky', group: 'Bluesky', name: 'Bluesky post', limit: 300, method: 'bsky', fold: null },
+  { id: 'bsky-bio', group: 'Bluesky', name: 'Bluesky bio', limit: 256, method: 'graphemes', fold: null },
+  { id: 'masto', group: 'Mastodon', name: 'Mastodon post', limit: 500, method: 'masto', fold: null, note: 'Default limit. Some servers allow more.' },
+  { id: 'reddit-title', group: 'Reddit', name: 'Reddit post title', limit: 300, method: 'graphemes', fold: null },
+];
