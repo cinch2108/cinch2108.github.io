@@ -1,5 +1,5 @@
 // LocalForge PDF service worker: caches the app shell only (never user files).
-const V = 'lf-mvnz7kct';
+const V = 'lf-mvnzz5ql';
 const CORE = ['/', '/css/styles.css', '/js/theme.js', '/js/app.js', '/js/consent.js', '/js/ui.js', '/js/store.js', '/js/catalog.js', '/fonts/inter.woff2', '/img/logo.svg', '/favicon.svg'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(CORE)).catch(() => {})); self.skipWaiting(); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });

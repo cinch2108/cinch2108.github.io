@@ -451,3 +451,7 @@ button.page:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (max-width:640px){.tool-head{flex-wrap:wrap;gap:.8rem}.tool-head .t-ic{width:46px;height:46px}.tool-head>div{flex:1 1 calc(100% - 60px);min-width:0}.tool-head .fav{margin-left:0;order:3}}
 html[data-theme="light"] .yes{color:#15803d}html[data-theme="light"] .no{color:#b91c1c}html[data-theme="light"] .meh{color:#a16207}
 html[data-theme="light"]{--ok:#15803d;--warn:#b45309;--err:#dc2626}
+.foot-team{margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid var(--border)}
+.foot-team ul{list-style:none;margin:.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.55rem 1.5rem}
+.foot-team a{text-decoration:none;color:var(--muted);font-size:.86rem;display:block;padding:.15rem 0}
+.foot-team a:hover{color:var(--text)}.foot-team strong{color:var(--text);font-weight:600}
