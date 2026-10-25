@@ -6,8 +6,10 @@ Sitemap: https://cinch2108.github.io/sitemap.xml
 Sitemap: https://cinch2108.github.io/numora/sitemap.xml
 Sitemap: https://cinch2108.github.io/pixelsmith/sitemap.xml
 Sitemap: https://cinch2108.github.io/mintkit/sitemap.xml
+Sitemap: https://cinch2108.github.io/mediaforge/sitemap.xml
 Sitemap: https://cinch2108.github.io/chroma/sitemap.xml
 Sitemap: https://cinch2108.github.io/textforge/sitemap.xml
 Sitemap: https://cinch2108.github.io/hourlark/sitemap.xml
 Sitemap: https://cinch2108.github.io/tagloom/sitemap.xml
 Sitemap: https://cinch2108.github.io/postsmith/sitemap.xml
+Sitemap: https://cinch2108.github.io/datakit/sitemap.xml
